@@ -1,0 +1,30 @@
+.about{
+    background-color: var(--bg-secondary);
+}
+.about-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.about-text{
+    width: 50%;
+}
+.my-skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+.about-text .skill-tag{
+    background-color: var(--border-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 14px;
+}
+.about-img{
+    width: 35%;
+    img{
+        border: var(--border-color) 5px solid;
+    }
+}
