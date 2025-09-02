@@ -52,8 +52,14 @@ overlay.addEventListener('click', () => {
     sideBar.classList.remove('shown');
     overlay.classList.remove('shown');
     body.classList.remove('disabled');
-    navLinksBtn.classList.toggle("clicked")
-    navLinks.classList.toggle("active")
+    navLinksBtn.classList.remove("clicked")
+    navLinks.classList.remove("active")
+    const shownVideo = document.querySelector(".vid-projects .shown video");
+    if (shownVideo) {
+        shownVideo.pause();
+        shownVideo.currentTime = 0; // يرجعه لأول الفيديو
+    }
+    videos.forEach((video) => {video.classList.remove("shown")})
 });
 
 const navLinksBtn = document.getElementById("nav")
