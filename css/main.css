@@ -371,3 +371,72 @@ footer{
     0%   { opacity: 0; }
     100% { opacity: 1; }
 }
+
+.fade-in{
+    opacity: 0;
+    transform: translateY(20px);
+}
+.fade-in-left{
+    opacity: 0;
+    transform: translateX(20px);
+}
+.zoom{
+    opacity: 0;
+    transform: scale(0);
+}
+.zoom.in-active{
+    animation: forwards zoomAnimation 1s 0.2s ease;
+}
+.fade-in.in-active{
+    animation: fadeInAnimation 1s 0.2s ease;
+    animation-fill-mode: forwards;
+}
+.fade-in-left.in-active{
+    animation: forwards fadeLeftAnimation 1s 0.2s ease;
+}
+.type{
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.type.in-active{
+    animation: forwards steps(56) typeAnimation 1s 0.2s;
+}
+@keyframes zoomAnimation{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes fadeInAnimation{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeLeftAnimation{
+    0%{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes typeAnimation {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 51ch;
+    }
+}
