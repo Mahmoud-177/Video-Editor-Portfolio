@@ -440,3 +440,18 @@ footer{
         width: 51ch;
     }
 }
+.scroller-cont{
+    height: 5px;
+    width: 100%;
+    background-color: var(--header-bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 555555;
+}
+.scroller{
+    width: 0;
+    height: 5px;
+    background-color: var(--accent);
+    border-radius: 5px;
+}

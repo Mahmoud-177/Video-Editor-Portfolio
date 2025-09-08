@@ -70,3 +70,11 @@ navLinksBtn.addEventListener("click" , _ => {
     navLinksBtn.classList.toggle("clicked")
     overlay.classList.toggle('shown')
 })
+
+const scroller = document.querySelector(".scroller")
+const height = document.documentElement.scrollHeight - document.documentElement.clientHeight 
+
+window.addEventListener("scroll", _ => {
+    let scrollTop = document.documentElement.scrollTop
+    scroller.style.width = `${(scrollTop / height) * 100}%`
+})
